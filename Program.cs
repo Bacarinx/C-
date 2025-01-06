@@ -40,7 +40,13 @@ using Newtonsoft.Json;
 // dynamic varDinamic = 4;
 // varDinamic = "Henrique Bacarin";
 
-MeuArray<int> meuArray = new MeuArray<int>();
-meuArray.AddArray(0);
+// MeuArray<int> meuArray = new MeuArray<int>();
+// meuArray.AddArray(0);
 
-Console.WriteLine(meuArray[0]);
+// Console.WriteLine(meuArray[0]);
+
+int num = 2;
+int num2 = 3;
+
+Console.WriteLine(num.isPair());
+Console.WriteLine(num2.isPair());
