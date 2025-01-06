@@ -1,0 +1,2 @@
+[{"Id":1,"Produto":"Teste","Preco":15,"DataVenda":"2025-01-06T16:03:02.2802443-03:00", "Desconto": null},
+{"Id":2,"Produto":"Teste2","Preco":30,"DataVenda":"2025-01-06T16:03:02.2849665-03:00","Desconto": 10}]
