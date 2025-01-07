@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Estudos\\C#\\hospedagem_Challenger\\hospedagem_Challenger.csproj": {}
+    "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Estudos\\C#\\C#.csproj": {}
   },
   "projects": {
-    "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Estudos\\C#\\hospedagem_Challenger\\hospedagem_Challenger.csproj": {
+    "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Estudos\\C#\\C#.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Estudos\\C#\\hospedagem_Challenger\\hospedagem_Challenger.csproj",
-        "projectName": "hospedagem_Challenger",
-        "projectPath": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Estudos\\C#\\hospedagem_Challenger\\hospedagem_Challenger.csproj",
+        "projectUniqueName": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Estudos\\C#\\C#.csproj",
+        "projectName": "C#",
+        "projectPath": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Estudos\\C#\\C#.csproj",
         "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Estudos\\C#\\hospedagem_Challenger\\obj\\",
+        "outputPath": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Estudos\\C#\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\henri\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,6 +43,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
