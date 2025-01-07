@@ -45,8 +45,9 @@ using Newtonsoft.Json;
 
 // Console.WriteLine(meuArray[0]);
 
-int num = 2;
-int num2 = 3;
+// int num = 2;
+// int num2 = 3;
 
-Console.WriteLine(num.isPair());
-Console.WriteLine(num2.isPair());
+// Console.WriteLine(num.isPair());
+// Console.WriteLine(num2.isPair());
+
