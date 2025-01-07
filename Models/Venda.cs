@@ -13,7 +13,8 @@ namespace Models
         public DateTime DataVenda { get; set; }
         public decimal? Desconto { get; set; }
 
-        public Venda(int id, string produto, decimal preco, DateTime dataVenda, decimal? desconto)
+        public Venda(int id, string produto, decimal preco, DateTime dataVenda, decimal?
+         desconto)
         {
             Id = id;
             Produto = produto;

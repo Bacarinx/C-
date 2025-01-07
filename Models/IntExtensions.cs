@@ -11,4 +11,4 @@ namespace Models
             return value % 2 == 0;
         }
     }
-}
+} 
