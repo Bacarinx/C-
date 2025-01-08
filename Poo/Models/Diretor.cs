@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace Poo.Models
 {
-    public class Aluno : Pessoa
+    public class Diretor : Professor
     {
-        public Aluno(string nome) : base(nome){}
-
-        public double Nota { get; set; }
+        public Diretor(string nome) : base(nome) {
+            
+       }
     }
 }

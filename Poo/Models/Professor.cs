@@ -7,10 +7,11 @@ namespace Poo.Models
 {
     public class Professor : Pessoa
     {
-        public decimal Salario { get; set; }
-        public override void Apresentar() {
+        public Professor(string nome) : base (nome){}
+
+        protected decimal Salario { get; set; }
+        public sealed override void Apresentar() {
             Console.WriteLine("Sou um professor");
         }
-
     }
 }
