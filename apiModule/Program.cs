@@ -1,3 +1,5 @@
+using System;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -32,6 +34,16 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 })
 .WithName("GetWeatherForecast");
+
+app.MapGet("/Data", () =>
+{
+  var obj = new
+  {
+    Data = DateTime.Now.ToShortDateString(),
+    Hora = DateTime.Now.ToShortTimeString()
+};
+  return obj;
+}).WithName("GetDate");
 
 app.Run();
 

@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Estudos\\C#\\apiModule\\apiModule.csproj": {}
+    "C:\\Users\\henri\\Desktop\\CursoC#\\apiModule\\apiModule\\apiModule.csproj": {}
   },
   "projects": {
-    "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Estudos\\C#\\apiModule\\apiModule.csproj": {
+    "C:\\Users\\henri\\Desktop\\CursoC#\\apiModule\\apiModule\\apiModule.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Estudos\\C#\\apiModule\\apiModule.csproj",
+        "projectUniqueName": "C:\\Users\\henri\\Desktop\\CursoC#\\apiModule\\apiModule\\apiModule.csproj",
         "projectName": "apiModule",
-        "projectPath": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Estudos\\C#\\apiModule\\apiModule.csproj",
+        "projectPath": "C:\\Users\\henri\\Desktop\\CursoC#\\apiModule\\apiModule\\apiModule.csproj",
         "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Estudos\\C#\\apiModule\\obj\\",
+        "outputPath": "C:\\Users\\henri\\Desktop\\CursoC#\\apiModule\\apiModule\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\henri\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\henri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

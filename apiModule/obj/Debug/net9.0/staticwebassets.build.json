@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "0CtsAQSbi6t7Evbdm45N7VNH22syLKjAUWEoh9obwOU=",
+  "Source": "apiModule",
+  "BasePath": "_content/apiModule",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
