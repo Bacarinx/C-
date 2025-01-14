@@ -32,3 +32,37 @@ C:\Users\henri\Desktop\CursoC#\apiModule\apiModule\obj\Debug\net9.0\refint\apiMo
 C:\Users\henri\Desktop\CursoC#\apiModule\apiModule\obj\Debug\net9.0\apiModule.pdb
 C:\Users\henri\Desktop\CursoC#\apiModule\apiModule\obj\Debug\net9.0\apiModule.genruntimeconfig.cache
 C:\Users\henri\Desktop\CursoC#\apiModule\apiModule\obj\Debug\net9.0\ref\apiModule.dll
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\bin\Debug\net9.0\appsettings.json
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\bin\Debug\net9.0\apiModule.staticwebassets.endpoints.json
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\bin\Debug\net9.0\apiModule.exe
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\bin\Debug\net9.0\apiModule.deps.json
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\bin\Debug\net9.0\apiModule.runtimeconfig.json
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\bin\Debug\net9.0\apiModule.dll
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\bin\Debug\net9.0\apiModule.pdb
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\apiModule.csproj.AssemblyReference.cache
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\apiModule.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\apiModule.AssemblyInfoInputs.cache
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\apiModule.AssemblyInfo.cs
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\apiModule.csproj.CoreCompileInputs.cache
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\apiModule.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\apiModule.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\apiModule.sourcelink.json
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\scopedcss\bundle\apiModule.styles.css
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\staticwebassets\msbuild.apiModule.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\staticwebassets\msbuild.apiModule.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\staticwebassets\msbuild.build.apiModule.props
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.apiModule.props
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.apiModule.props
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\apiModule.csproj.Up2Date
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\apiModule.dll
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\refint\apiModule.dll
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\apiModule.pdb
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\apiModule.genruntimeconfig.cache
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\apiModule\obj\Debug\net9.0\ref\apiModule.dll

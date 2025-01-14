@@ -45,9 +45,20 @@ app.MapGet("/Data", () =>
   return obj;
 }).WithName("GetDate");
 
+app.MapGet("/Apresentacao/{nome}", (string nome) =>
+{
+  var ap = new Apresentar(nome, "Litoldo");
+  return ap;
+});
+
 app.Run();
 
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+public record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
+
+public record Apresentar(string nome, string sobrenome){
+    public string mensagem => $"Olá {nome} {sobrenome}!";
+}
+ 
