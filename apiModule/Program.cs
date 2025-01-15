@@ -19,14 +19,25 @@ app.UseHttpsRedirection();
 //-----------------------Camada de Controle
 app.MapGet("/Contatos", async (AgendaContext context) =>
 {
-  await context.Contatos.ToListAsync();
+  var res = await context.Contatos.ToListAsync();
+  if(res == null) return Results.NotFound();
+  return Results.Ok(res);
+});
+
+app.MapGet("/Contatos/{Id}", async (AgendaContext context, int id) =>
+{
+  var res = await context.Contatos.FirstOrDefaultAsync(u => u.Id == id);
+
+  if(res == null) 
+    return Results.NotFound();
+
+  return Results.Ok(res);
 });
 
 app.MapPost("/Contatos", async(Contato contato, AgendaContext context) =>
 {
   context.Contatos.Add(contato);
   await context.SaveChangesAsync();
-  return Results.Created($"/Contatos/{contato.Id}", contato);
 });
 
 app.Run();
