@@ -34,6 +34,15 @@ app.MapGet("/Contatos/{Id}", async (AgendaContext context, int id) =>
   return Results.Ok(res);
 });
 
+// app.MapGet("/Contatos/", async(AgendaContext context, string nome) =>
+// {
+//   var res = await context.Contatos.Where(c => EF.Functions.Like(c.Nome, $"%{nome}%")).ToListAsync();
+  
+//   if(res == null) return Results.NotFound("Nenhum Contato encontrado com esse nome!");
+
+//   return Results.Ok();
+// });
+
 app.MapPost("/Contatos", async(Contato contato, AgendaContext context) =>
 {
   context.Contatos.Add(contato);
