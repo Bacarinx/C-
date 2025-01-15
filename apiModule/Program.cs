@@ -40,4 +40,30 @@ app.MapPost("/Contatos", async(Contato contato, AgendaContext context) =>
   await context.SaveChangesAsync();
 });
 
+app.MapPatch("/Contatos/{id}", async (AgendaContext context, int id, Contato newContact) =>
+{
+  Contato res = await context.Contatos.FirstOrDefaultAsync(c => c.Id == id);
+
+  if(res == null){
+    return Results.NotFound("Contato não encontrado!");
+  }
+
+  res.Nome = newContact.Nome;
+  res.Telefone = newContact.Telefone;
+  res.Ativo = newContact.Ativo;
+  
+  await context.SaveChangesAsync();
+  return Results.Ok();
+});
+
+app.MapDelete("/Contatos/{id}", async (AgendaContext context, int id) =>
+{
+  var res = await context.Contatos.FirstOrDefaultAsync(c => c.Id == id);
+  if(res == null) return Results.NotFound("Contato não encontrado!");
+
+  context.Contatos.Remove(res);
+  await context.SaveChangesAsync();
+  return Results.Ok("Exclusão realizada com sucesso!");
+});
+
 app.Run();
