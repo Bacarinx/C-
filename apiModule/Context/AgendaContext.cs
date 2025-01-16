@@ -9,7 +9,9 @@ namespace apiModule.Context
 {
     public class AgendaContext : DbContext
     {
-      public AgendaContext(DbContextOptions<AgendaContext> options) : base(options){} 
+      public AgendaContext(DbContextOptions<AgendaContext> options) : base(options){
+      Contatos = Set<Contato>();
+    } 
       public DbSet<Contato> Contatos { get; set; } //confirgurando a tabela de contatos referenciando a classe Contato  
   }
 }

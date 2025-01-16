@@ -17,11 +17,17 @@ if (app.Environment.IsDevelopment()) app.MapOpenApi();
 app.UseHttpsRedirection(); 
 
 //-----------------------Camada de Controle
-app.MapGet("/Contatos", async (AgendaContext context) =>
+app.MapGet("/Contatos", async (AgendaContext context, string? nome) =>
 {
-  var res = await context.Contatos.ToListAsync();
-  if(res == null) return Results.NotFound();
-  return Results.Ok(res);
+    if(String.IsNullOrWhiteSpace(nome)) {
+      var res = await context.Contatos.ToListAsync();
+      if(res == null || !res.Any()) return Results.NotFound();
+      return Results.Ok(res);
+    } else {
+      var res = await context.Contatos.Where(c =>c.Nome != null && c.Nome.Contains(nome)).ToListAsync();
+      if(res == null || !res.Any()) return Results.NotFound("Nenhum Contato encontrado com esse nome!");
+      return Results.Ok(res);
+    }
 });
 
 app.MapGet("/Contatos/{Id}", async (AgendaContext context, int id) =>
@@ -34,15 +40,6 @@ app.MapGet("/Contatos/{Id}", async (AgendaContext context, int id) =>
   return Results.Ok(res);
 });
 
-// app.MapGet("/Contatos/", async(AgendaContext context, string nome) =>
-// {
-//   var res = await context.Contatos.Where(c => EF.Functions.Like(c.Nome, $"%{nome}%")).ToListAsync();
-  
-//   if(res == null) return Results.NotFound("Nenhum Contato encontrado com esse nome!");
-
-//   return Results.Ok();
-// });
-
 app.MapPost("/Contatos", async(Contato contato, AgendaContext context) =>
 {
   context.Contatos.Add(contato);
@@ -51,15 +48,15 @@ app.MapPost("/Contatos", async(Contato contato, AgendaContext context) =>
 
 app.MapPatch("/Contatos/{id}", async (AgendaContext context, int id, Contato newContact) =>
 {
-  Contato res = await context.Contatos.FirstOrDefaultAsync(c => c.Id == id);
+  Contato? res = await context.Contatos.FirstOrDefaultAsync(c => c.Id == id);
 
   if(res == null){
     return Results.NotFound("Contato não encontrado!");
   }
 
-  res.Nome = newContact.Nome;
-  res.Telefone = newContact.Telefone;
-  res.Ativo = newContact.Ativo;
+  if(!String.IsNullOrWhiteSpace(newContact.Nome)) res.Nome = newContact.Nome;
+  if(!String.IsNullOrWhiteSpace(newContact.Telefone)) res.Telefone = newContact.Telefone;
+  if(newContact.Ativo) res.Ativo = newContact.Ativo;
   
   await context.SaveChangesAsync();
   return Results.Ok();
