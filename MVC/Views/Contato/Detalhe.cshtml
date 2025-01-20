@@ -1,0 +1,32 @@
+@model MVC.Models.Contato
+
+@{
+  ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes do Contato</h1>
+<hr>
+
+<div>
+  <dl class="row">
+    <dt class="col-sm-2">
+      Nome
+    </dt>
+    <dt class="col-sm-10">
+      @Html.DisplayFor(x => x.Nome)
+    </dt>
+    <dt class="col-sm-2">
+      Telefone
+    </dt>
+    <dt class="col-sm-10">
+      @Html.DisplayFor(x => x.Telefone)
+    </dt>
+    <dt class="col-sm-2">
+      Ativo
+    </dt>
+    <dt class="col-sm-10">
+      @Html.DisplayFor(x => x.Ativo)
+    </dt>
+
+  </dl>
+</div>
