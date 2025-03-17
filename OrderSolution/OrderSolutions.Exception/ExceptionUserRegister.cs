@@ -11,12 +11,13 @@ namespace OrderSolutions.Exception
     {
         private readonly List<String> _Erros;
 
-        public ExceptionUserRegister(List<String> errors) : base(String.Empty){
+        public ExceptionUserRegister(List<String> errors) : base(String.Empty)
+        {
             _Erros = errors;
         }
 
         public override List<string> GetMessage() => _Erros;
 
-        public override HttpStatusCode GetStatusCode() => HttpStatusCode.NotAcceptable;
+        public override HttpStatusCode GetStatusCode() => HttpStatusCode.Unauthorized;
     }
 }
