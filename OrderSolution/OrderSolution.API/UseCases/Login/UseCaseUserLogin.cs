@@ -19,12 +19,9 @@ namespace OrderSolution.API.UseCases.Login
             var token = new JwtToken();
 
             var UserDb = context.Users.FirstOrDefault(user => user.Email == request.Email);
-            if(UserDb == null || !Bcrypt.Verify(request.Password, UserDb)){
-                var errorProducesType = new ExceptionRegisterUserResponse();
-
-                errorProducesType.Errors.Add("Email ou Senha inválidos!");
-
-                throw new ExceptionLoginEmailNotFound(errorProducesType.Errors);
+            if (UserDb == null || !Bcrypt.Verify(request.Password, UserDb))
+            {
+                throw new ExceptionLoginEmailNotFound();
             }
 
             var response = new ResponseUserRegisterJson
