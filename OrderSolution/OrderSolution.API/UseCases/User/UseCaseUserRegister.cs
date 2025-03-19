@@ -29,8 +29,11 @@ namespace OrderSolution.API.UseCases.User
             if (!responseValidation.IsValid)
             {
                 var errors = responseValidation.Errors.Select(error => error.ErrorMessage).ToList();
+
                 var responseException = new ExceptionRegisterUserResponse();
+
                 responseException.Errors = errors;
+                
 ;               throw new ExceptionUserRegister(errors);
             }
 

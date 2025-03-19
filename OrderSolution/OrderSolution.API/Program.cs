@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using OrderSolution.API.Context;
+using OrderSolutions.Exception;
 
 var builder = WebApplication.CreateBuilder(args);
 
