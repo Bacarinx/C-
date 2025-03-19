@@ -22,7 +22,7 @@ namespace OrderSolution.API.Controllers
         }
 
         [ProducesResponseType(typeof(ResponseUserRegisterJson), StatusCodes.Status201Created)]
-        [ProducesResponseType(typeof(ExceptionRegisterUserResponse), StatusCodes.Status406NotAcceptable)]
+        [ProducesResponseType(typeof(ExceptionRegisterUserResponse), StatusCodes.Status401Unauthorized)]
         [HttpPost]
         public IActionResult Register(RequestUserRegisterJson request)
         {

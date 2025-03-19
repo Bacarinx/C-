@@ -8,7 +8,11 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OrderSolutions.Exception
+<<<<<<< HEAD
 build_property.ProjectDir = c:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolutions.Exception\
+=======
+build_property.ProjectDir = /home/henriquebacarin/study/dotnet/OrderSolution/OrderSolutions.Exception/
+>>>>>>> d4655694f1e78026d8529bd64dcb01fa5a46ce0f
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
