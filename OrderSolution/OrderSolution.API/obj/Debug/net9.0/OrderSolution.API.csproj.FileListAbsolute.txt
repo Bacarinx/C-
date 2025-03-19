@@ -176,3 +176,14 @@ C:/Users/henri/OneDrive/Área de Trabalho/Estudos/C#/OrderSolution/OrderSolution
 /home/henriquebacarin/study/dotnet/OrderSolution/OrderSolution.API/obj/Debug/net9.0/OrderSolution.API.pdb
 /home/henriquebacarin/study/dotnet/OrderSolution/OrderSolution.API/obj/Debug/net9.0/OrderSolution.API.genruntimeconfig.cache
 /home/henriquebacarin/study/dotnet/OrderSolution/OrderSolution.API/obj/Debug/net9.0/ref/OrderSolution.API.dll
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\OrderSolution.API.csproj.AssemblyReference.cache
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\OrderSolution.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\OrderSolution.API.AssemblyInfoInputs.cache
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\OrderSolution.API.AssemblyInfo.cs
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\OrderSolution.API.csproj.CoreCompileInputs.cache
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\OrderSolution.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\OrderSolution.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\OrderSolution.API.sourcelink.json
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\OrderSolution.API.dll
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\refint\OrderSolution.API.dll
+C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\OrderSolution.API.pdb
