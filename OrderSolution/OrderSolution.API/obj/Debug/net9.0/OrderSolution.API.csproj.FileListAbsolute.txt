@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:/Users/henri/OneDrive/Área de Trabalho/Estudos/C#/OrderSolution/OrderSolution.API/bin/Debug/net9.0/appsettings.Development.json
 C:/Users/henri/OneDrive/Área de Trabalho/Estudos/C#/OrderSolution/OrderSolution.API/bin/Debug/net9.0/appsettings.json
 C:/Users/henri/OneDrive/Área de Trabalho/Estudos/C#/OrderSolution/OrderSolution.API/bin/Debug/net9.0/OrderSolution.API.staticwebassets.endpoints.json
@@ -29,7 +30,6 @@ C:/Users/henri/OneDrive/Área de Trabalho/Estudos/C#/OrderSolution/OrderSolution
 C:/Users/henri/OneDrive/Área de Trabalho/Estudos/C#/OrderSolution/OrderSolution.API/obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.OrderSolution.API.props
 C:/Users/henri/OneDrive/Área de Trabalho/Estudos/C#/OrderSolution/OrderSolution.API/obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.OrderSolution.API.props
 C:/Users/henri/OneDrive/Área de Trabalho/Estudos/C#/OrderSolution/OrderSolution.API/obj/Debug/net9.0/staticwebassets.pack.json
-C:/Users/henri/OneDrive/Área de Trabalho/Estudos/C#/OrderSolution/OrderSolution.API/obj/Debug/net9.0/staticwebassets.upToDateCheck.txt
 C:/Users/henri/OneDrive/Área de Trabalho/Estudos/C#/OrderSolution/OrderSolution.API/obj/Debug/net9.0/OrderSol.D61AAD10.Up2Date
 C:/Users/henri/OneDrive/Área de Trabalho/Estudos/C#/OrderSolution/OrderSolution.API/obj/Debug/net9.0/OrderSolution.API.dll
 C:/Users/henri/OneDrive/Área de Trabalho/Estudos/C#/OrderSolution/OrderSolution.API/obj/Debug/net9.0/refint/OrderSolution.API.dll
@@ -83,6 +83,7 @@ C:/Users/henri/OneDrive/Área de Trabalho/Estudos/C#/OrderSolution/OrderSolution
 C:/Users/henri/OneDrive/Área de Trabalho/Estudos/C#/OrderSolution/OrderSolution.API/bin/Debug/net9.0/FluentValidation.DependencyInjectionExtensions.dll
 C:/Users/henri/OneDrive/Área de Trabalho/Estudos/C#/OrderSolution/OrderSolution.API/bin/Debug/net9.0/OrderSolutions.Exception.dll
 C:/Users/henri/OneDrive/Área de Trabalho/Estudos/C#/OrderSolution/OrderSolution.API/bin/Debug/net9.0/OrderSolutions.Exception.pdb
+=======
 /home/henriquebacarin/study/dotnet/OrderSolution/OrderSolution.API/bin/Debug/net9.0/appsettings.Development.json
 /home/henriquebacarin/study/dotnet/OrderSolution/OrderSolution.API/bin/Debug/net9.0/appsettings.json
 /home/henriquebacarin/study/dotnet/OrderSolution/OrderSolution.API/bin/Debug/net9.0/OrderSolution.API.staticwebassets.endpoints.json
@@ -176,3 +177,4 @@ C:/Users/henri/OneDrive/Área de Trabalho/Estudos/C#/OrderSolution/OrderSolution
 /home/henriquebacarin/study/dotnet/OrderSolution/OrderSolution.API/obj/Debug/net9.0/OrderSolution.API.pdb
 /home/henriquebacarin/study/dotnet/OrderSolution/OrderSolution.API/obj/Debug/net9.0/OrderSolution.API.genruntimeconfig.cache
 /home/henriquebacarin/study/dotnet/OrderSolution/OrderSolution.API/obj/Debug/net9.0/ref/OrderSolution.API.dll
+>>>>>>> 3d6897634a3b6346c6e825edaab68d0a42e487af
