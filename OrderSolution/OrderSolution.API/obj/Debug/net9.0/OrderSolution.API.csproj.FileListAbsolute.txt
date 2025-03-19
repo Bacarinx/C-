@@ -29,7 +29,6 @@ C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution
 C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.OrderSolution.API.props
 C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.OrderSolution.API.props
 C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\OrderSol.D61AAD10.Up2Date
 C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\OrderSolution.API.dll
 C:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\obj\Debug\net9.0\refint\OrderSolution.API.dll
