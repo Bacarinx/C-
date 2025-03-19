@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using OrderSolution.API.Context;
+using OrderSolutions.Exception;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,9 +11,12 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddSwaggerGen();
 
+var connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING") 
+                       ?? builder.Configuration.GetConnectionString("DefaultConnectionString");
+
 builder.Services.AddDbContext<OrderSolutionDbContext>(c =>
 {
-    c.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"));
+    c.UseSqlServer(connectionString);
 });
 
 var app = builder.Build();

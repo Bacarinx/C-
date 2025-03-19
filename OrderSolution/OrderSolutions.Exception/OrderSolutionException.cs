@@ -9,7 +9,9 @@ namespace OrderSolutions.Exception
 {
     public abstract class OrderSolutionException : SystemException
     {
+        protected OrderSolutionException(){}
         protected OrderSolutionException(string message) : base(message) { }
+        
         public abstract List<String> GetMessage();
         public abstract HttpStatusCode GetStatusCode();
     }
