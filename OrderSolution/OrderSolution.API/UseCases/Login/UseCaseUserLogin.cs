@@ -7,7 +7,7 @@ using OrderSolution.API.Secutiry.Criptograph;
 using OrderSolution.API.Secutiry.Token;
 using OrderSolution.Comunication.Requests;
 using OrderSolution.Comunication.Responses;
-using OrderSolutions.Exception.obj;
+using OrderSolutions.Exception;
 
 namespace OrderSolution.API.UseCases.Login
 {

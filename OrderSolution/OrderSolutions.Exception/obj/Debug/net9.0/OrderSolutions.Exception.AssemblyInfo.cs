@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OrderSolutions.Exception")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c9ecda3e6a37e4eec2e5dc012300367d71a9297")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d76f9ea56f6f2dc3d4187ef67175bc7cb3cdbc4")]
 [assembly: System.Reflection.AssemblyProductAttribute("OrderSolutions.Exception")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OrderSolutions.Exception")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
