@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentValidation.Results;
 using OrderSolution.API.Context;
 using OrderSolution.API.Entities;
 using OrderSolution.API.Services.LoggedUser;
@@ -15,20 +16,28 @@ namespace OrderSolution.API.UseCases.Product
     public class UseCaseProduct
     {
         private readonly OrderSolutionDbContext _context;
-        private readonly HttpContext _httpContext;
+        private readonly IHttpContextAccessor _httpContext;
 
-        public UseCaseProduct(OrderSolutionDbContext context, HttpContext httpContext)
+#pragma warning disable IDE0290
+        public UseCaseProduct(OrderSolutionDbContext context, IHttpContextAccessor httpContext)
         {
             _context = context;
             _httpContext = httpContext;
         }
 
-        public ResponseProduct CriarProduto(RequestNewProduct request) 
+        public ResponseProduct CriarProduto(RequestNewProduct request)
         {
             var validator = new ValidationProductRegister();
             var responseValidation = validator.Validate(request);
 
-            if(!responseValidation.IsValid)
+            var categoryExists = _context.Categories.FirstOrDefault(cat => cat.Id == request.CategoryId);
+
+            if (categoryExists == null)
+            {
+                responseValidation.Errors.Add(new ValidationFailure("CategoryId", "Essa categoria não existe, adicione o produto em uma categoria existente"));
+            }
+
+            if (!responseValidation.IsValid)
             {
                 var errors = responseValidation.Errors.Select(error => error.ErrorMessage).ToList();
                 var errormensages = new ExceptionRegisterUserResponse();
@@ -46,7 +55,10 @@ namespace OrderSolution.API.UseCases.Product
                 UserId = ActualLoggedUser.Id
             });
 
-            return new ResponseProduct{
+            _context.SaveChanges();
+
+            return new ResponseProduct
+            {
                 Name = request.Name,
                 CategoryId = request.CategoryId
             };
@@ -54,8 +66,11 @@ namespace OrderSolution.API.UseCases.Product
 
         public List<ResponseProduct> ListarProdutosPorCategoria()
         {
+            var loggedUser = new LoggedUserService(_httpContext);
+            var ActualLoggedUser = loggedUser.getUser(_context);
+
             var query = _context.Products.AsQueryable();
-            var result = query.OrderBy(product => product.Name);
+            var result = query.Where(q => q.UserId == ActualLoggedUser.Id).OrderBy(product => product.Name);
 
             List<ResponseProduct> produtos = result.Select(produto => new ResponseProduct
             {
@@ -63,12 +78,10 @@ namespace OrderSolution.API.UseCases.Product
                 CategoryId = produto.CategoryId
             }).ToList();
 
-            if(produtos.Count == 0)
-              throw new ExceptionProductsNotFound();
+            if (produtos.Count == 0)
+                throw new ExceptionProductsNotFound();
 
             return produtos;
         }
-
-
     }
 }
