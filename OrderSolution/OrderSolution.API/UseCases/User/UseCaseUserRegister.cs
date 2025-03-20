@@ -32,9 +32,9 @@ namespace OrderSolution.API.UseCases.User
 
                 var responseException = new ExceptionRegisterUserResponse();
 
-                responseException.Errors = errors;
+                var errorList = responseException.Errors = errors;
                 
-;               throw new ExceptionUserRegister(errors);
+;               throw new ExceptionUserRegister(errorList);
             }
 
             var cript = new BCryptCriptograph();

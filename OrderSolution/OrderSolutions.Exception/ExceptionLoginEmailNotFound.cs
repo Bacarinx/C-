@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace OrderSolutions.Exception.obj
+namespace OrderSolutions.Exception
 {
     public class ExceptionLoginEmailNotFound : OrderSolutionException
     {
