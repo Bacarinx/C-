@@ -13,7 +13,7 @@ using OrderSolution.Comunication.Responses;
 namespace OrderSolution.API.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class CategoryController : ControllerBase
     {
         private readonly OrderSolutionDbContext _context;

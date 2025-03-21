@@ -18,8 +18,8 @@ namespace OrderSolution.API.Controllers
     {
         private readonly OrderSolutionDbContext _context;
         private readonly IHttpContextAccessor _httpContext;
-        
-        #pragma warning disable IDE0290
+
+#pragma warning disable IDE0290
         public ProductController(OrderSolutionDbContext context, IHttpContextAccessor httpContext)
         {
             _context = context;
@@ -46,6 +46,16 @@ namespace OrderSolution.API.Controllers
             var useCase = new UseCaseProduct(_context, _httpContext);
             useCase.CriarProduto(request);
             return Created(String.Empty, request);
+        }
+
+        [HttpDelete]
+        [Authorize]
+        [Route("id")]
+        public IActionResult RemoverProduto(int id)
+        {
+            var useCase = new UseCaseProduct(_context, _httpContext);
+            useCase.RemoverProduto(id);
+            return Ok("Produto Removido com sucesso!");
         }
     }
 }

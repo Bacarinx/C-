@@ -25,6 +25,7 @@ namespace OrderSolution.API.UseCases.Product
             _httpContext = httpContext;
         }
 
+
         public ResponseProduct CriarProduto(RequestNewProduct request)
         {
             var validator = new ValidationProductRegister();
@@ -44,7 +45,6 @@ namespace OrderSolution.API.UseCases.Product
                 var errorList = errormensages.Errors = errors;
                 throw new ExceptionUserRegister(errorList);
             }
-
             var loggedUser = new LoggedUserService(_httpContext);
             var ActualLoggedUser = loggedUser.getUser(_context);
 
@@ -82,6 +82,24 @@ namespace OrderSolution.API.UseCases.Product
                 throw new ExceptionProductsNotFound();
 
             return produtos;
+        }
+
+        public void RemoverProduto(int ProductId)
+        {
+            var loggedUser = new LoggedUserService(_httpContext);
+            var ActualLoggedUser = loggedUser.getUser(_context);
+
+            var productToBeremoved = _context.Products.FirstOrDefault(prod => prod.Id == ProductId);
+
+            if (productToBeremoved == null)
+                throw new ExceptionNoContentMessage(["Produto não existe!"]);
+
+            var userProductId = productToBeremoved.UserId;
+            if (userProductId != ActualLoggedUser.Id)
+                throw new ExceptionUserRegister(["Você não possui acesso para remover esse produto!"]);
+
+            _context.Products.Remove(productToBeremoved);
+            _context.SaveChanges();
         }
     }
 }
