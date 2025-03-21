@@ -9,13 +9,21 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OrderSolution.API
 build_property.RootNamespace = OrderSolution.API
+<<<<<<< HEAD
 build_property.ProjectDir = /home/henriquebacarin/study/dotnet/OrderSolution/OrderSolution.API/
+=======
+build_property.ProjectDir = c:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API\
+>>>>>>> 65e66c96df31fa7f8dfdf23035fd70bba0eff521
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+<<<<<<< HEAD
 build_property.MSBuildProjectDirectory = /home/henriquebacarin/study/dotnet/OrderSolution/OrderSolution.API
+=======
+build_property.MSBuildProjectDirectory = c:\Users\henri\OneDrive\Área de Trabalho\Estudos\C#\OrderSolution\OrderSolution.API
+>>>>>>> 65e66c96df31fa7f8dfdf23035fd70bba0eff521
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
