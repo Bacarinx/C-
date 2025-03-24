@@ -13,5 +13,17 @@ namespace OrderSolution.API.Context
         public required DbSet<Category> Categories { get; set; }
         public required DbSet<Product> Products { get; set; }
         public required DbSet<Client> Clients { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>()
+                .HasOne(p => p.User)
+                .WithMany()
+                .HasForeignKey(p => p.UserId)
+                .OnDelete(DeleteBehavior.NoAction); // Impede a deleção em cascata
+            modelBuilder.Entity<Product>()
+                .Property(p => p.Price)
+                .HasPrecision(18, 2);
+        }
     }
 }
