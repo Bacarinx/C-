@@ -38,6 +38,9 @@ namespace OrderSolution.API.UseCases.Product
                 responseValidation.Errors.Add(new ValidationFailure("CategoryId", "Essa categoria não existe, adicione o produto em uma categoria existente"));
             }
 
+            if (request.Price <= 0)
+                responseValidation.Errors.Add(new ValidationFailure("Price", "O preço precisa ser um valor positivo!"));
+
             if (!responseValidation.IsValid)
             {
                 var errors = responseValidation.Errors.Select(error => error.ErrorMessage).ToList();
@@ -52,6 +55,7 @@ namespace OrderSolution.API.UseCases.Product
             {
                 Name = request.Name,
                 CategoryId = request.CategoryId,
+                Price = request.Price,
                 UserId = ActualLoggedUser.Id
             });
 
@@ -60,7 +64,8 @@ namespace OrderSolution.API.UseCases.Product
             return new ResponseProduct
             {
                 Name = request.Name,
-                CategoryId = request.CategoryId
+                CategoryId = request.CategoryId,
+                Price = request.Price
             };
         }
 
@@ -75,7 +80,8 @@ namespace OrderSolution.API.UseCases.Product
             List<ResponseProduct> produtos = result.Select(produto => new ResponseProduct
             {
                 Name = produto.Name,
-                CategoryId = produto.CategoryId
+                CategoryId = produto.CategoryId,
+                Price = produto.Price
             }).ToList();
 
             if (produtos.Count == 0)

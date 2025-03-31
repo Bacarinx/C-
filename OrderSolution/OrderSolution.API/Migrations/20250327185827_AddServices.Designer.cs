@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OrderSolution.API.Context;
 
@@ -11,9 +12,11 @@ using OrderSolution.API.Context;
 namespace OrderSolution.API.Migrations
 {
     [DbContext(typeof(OrderSolutionDbContext))]
-    partial class OrderSolutionDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250327185827_AddServices")]
+    partial class AddServices
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -104,76 +107,6 @@ namespace OrderSolution.API.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("OrderSolution.API.Entities.Service", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("EndService")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("StartService")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Services");
-                });
-
-            modelBuilder.Entity("OrderSolution.API.Entities.ServiceClient", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ClientId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ServiceId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ClientId");
-
-                    b.HasIndex("ServiceId");
-
-                    b.ToTable("ServiceClients");
-                });
-
-            modelBuilder.Entity("OrderSolution.API.Entities.ServiceClientProducts", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ServiceClientId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("ServiceClientId");
-
-                    b.ToTable("ServiceClientProducts");
-                });
-
             modelBuilder.Entity("OrderSolution.API.Entities.User", b =>
                 {
                     b.Property<int>("Id")
@@ -249,55 +182,6 @@ namespace OrderSolution.API.Migrations
                     b.Navigation("Category");
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("OrderSolution.API.Entities.Service", b =>
-                {
-                    b.HasOne("OrderSolution.API.Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("OrderSolution.API.Entities.ServiceClient", b =>
-                {
-                    b.HasOne("OrderSolution.API.Entities.Client", "Client")
-                        .WithMany()
-                        .HasForeignKey("ClientId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("OrderSolution.API.Entities.Service", "Service")
-                        .WithMany()
-                        .HasForeignKey("ServiceId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("Client");
-
-                    b.Navigation("Service");
-                });
-
-            modelBuilder.Entity("OrderSolution.API.Entities.ServiceClientProducts", b =>
-                {
-                    b.HasOne("OrderSolution.API.Entities.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("OrderSolution.API.Entities.ServiceClient", "ServiceClient")
-                        .WithMany()
-                        .HasForeignKey("ServiceClientId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-
-                    b.Navigation("ServiceClient");
                 });
 #pragma warning restore 612, 618
         }
