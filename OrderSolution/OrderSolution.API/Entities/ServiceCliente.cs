@@ -17,5 +17,10 @@ namespace OrderSolution.API.Entities
 
         [ForeignKey("ClientId")]
         public Client Client { get; set; } = null!;
+
+        public int UserId{ get; set; }
+
+        [ForeignKey("UserId")]
+        public User User { get; set; } = null!;
     }
 }

@@ -6,7 +6,7 @@ namespace OrderSolution.API.Context
 {
     public class OrderSolutionDbContext : DbContext
     {
-        #pragma warning disable IDE0290
+#pragma warning disable IDE0290
         public OrderSolutionDbContext(DbContextOptions<OrderSolutionDbContext> opt) : base(opt) { }
 
         public required DbSet<User> Users { get; set; }
@@ -24,18 +24,36 @@ namespace OrderSolution.API.Context
                 .WithMany()
                 .HasForeignKey(p => p.UserId)
                 .OnDelete(DeleteBehavior.NoAction); // Impede a deleção em cascata
+
             modelBuilder.Entity<Product>()
                 .Property(p => p.Price)
                 .HasPrecision(18, 2);
+
             modelBuilder.Entity<ServiceClient>()
                 .HasOne(sc => sc.Service)
                 .WithMany()
                 .HasForeignKey(sc => sc.ServiceId)
                 .OnDelete(DeleteBehavior.NoAction);
+            modelBuilder.Entity<ServiceClient>()
+                .HasOne(sc => sc.User)
+                .WithMany()
+                .HasForeignKey(sc => sc.UserId)
+                .OnDelete(DeleteBehavior.NoAction);
+
             modelBuilder.Entity<ServiceClientProducts>()
                 .HasOne(sc => sc.ServiceClient)
                 .WithMany()
                 .HasForeignKey(sc => sc.ServiceClientId)
+                .OnDelete(DeleteBehavior.NoAction);
+            modelBuilder.Entity<ServiceClientProducts>()
+                .HasOne(sc => sc.Service)
+                .WithMany()
+                .HasForeignKey(sc => sc.ServiceId)
+                .OnDelete(DeleteBehavior.NoAction);
+            modelBuilder.Entity<ServiceClientProducts>()
+                .HasOne(sc => sc.User)
+                .WithMany()
+                .HasForeignKey(sc => sc.UserId)
                 .OnDelete(DeleteBehavior.NoAction);
         }
     }

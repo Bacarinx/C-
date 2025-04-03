@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OrderSolution.API.Context;
 
@@ -11,9 +12,11 @@ using OrderSolution.API.Context;
 namespace OrderSolution.API.Migrations
 {
     [DbContext(typeof(OrderSolutionDbContext))]
-    partial class OrderSolutionDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250403005637_ProductIsActiveService")]
+    partial class ProductIsActiveService
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -142,16 +145,11 @@ namespace OrderSolution.API.Migrations
                     b.Property<int>("ServiceId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("ClientId");
 
                     b.HasIndex("ServiceId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("ServiceClients");
                 });
@@ -173,21 +171,11 @@ namespace OrderSolution.API.Migrations
                     b.Property<int>("ServiceClientId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ServiceId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("ProductId");
 
                     b.HasIndex("ServiceClientId");
-
-                    b.HasIndex("ServiceId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("ServiceClientProducts");
                 });
@@ -294,17 +282,9 @@ namespace OrderSolution.API.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("OrderSolution.API.Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
                     b.Navigation("Client");
 
                     b.Navigation("Service");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("OrderSolution.API.Entities.ServiceClientProducts", b =>
@@ -321,25 +301,9 @@ namespace OrderSolution.API.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("OrderSolution.API.Entities.Service", "Service")
-                        .WithMany()
-                        .HasForeignKey("ServiceId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("OrderSolution.API.Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
                     b.Navigation("Product");
 
-                    b.Navigation("Service");
-
                     b.Navigation("ServiceClient");
-
-                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

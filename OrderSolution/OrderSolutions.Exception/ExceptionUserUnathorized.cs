@@ -9,7 +9,7 @@ namespace OrderSolutions.Exception
 
     public class ExceptionUserUnathorized : OrderSolutionException
     {
-        public ExceptionUserUnathorized() : base("Usuárionão encontrado e/ou não autorizado!") { }
+        public ExceptionUserUnathorized() : base("Usuário não encontrado e/ou não autorizado!") { }
         public override List<string> GetMessage() => [Message];
         public override HttpStatusCode GetStatusCode() => HttpStatusCode.Unauthorized;
     }
