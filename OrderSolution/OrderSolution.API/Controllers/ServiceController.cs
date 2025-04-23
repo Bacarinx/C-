@@ -37,10 +37,10 @@ namespace OrderSolution.API.Controllers
         [HttpPatch]
         [ProducesResponseType(typeof(ResponseService), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ExceptionRegisterUserResponse), StatusCodes.Status401Unauthorized)]
-        public IActionResult EndService(int ServiceId)
+        public IActionResult EndService(Service service)
         {
             var useCase = new UseCaseServices(_context, _httpcontext);
-            var response = useCase.EndService(ServiceId);
+            var response = useCase.EndService(service);
             return Ok(response);
         }
     }

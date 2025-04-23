@@ -20,10 +20,10 @@ namespace OrderSolution.API.UseCases.Services
             _context = context;
         }
 
-        public ResponseService StartService(OrderSolutionDbContext context, IHttpContextAccessor httpContext)
+        public ResponseService StartService()
         {
-            var userLogged = new LoggedUserService(httpContext);
-            var user = userLogged.getUser(context);
+            var userLogged = new LoggedUserService(_httpContext);
+            var user = userLogged.getUser(_context);
 
             if (user == null)
                 throw new ExceptionUserUnathorized();
@@ -34,15 +34,15 @@ namespace OrderSolution.API.UseCases.Services
             };
         }
 
-        public ResponseService EndService(OrderSolutionDbContext context, IHttpContextAccessor httpContext, Service service)
+        public ResponseService EndService(Service service)
         {
-            var userLogged = new LoggedUserService(httpContext);
-            var user = userLogged.getUser(context);
+            var userLogged = new LoggedUserService(_httpContext);
+            var user = userLogged.getUser(_context);
 
             if (user == null || user.Id != service.UserId)
                 throw new ExceptionUserUnathorized();
 
-            var serviceExists = context.Services.FirstOrDefault(s => s.Id == service.Id);
+            var serviceExists = _context.Services.FirstOrDefault(s => s.Id == service.Id);
             if (serviceExists == null)
                 throw new ExceptionServiceNotFound();
 
